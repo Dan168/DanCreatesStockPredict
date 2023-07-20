@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>DanCreates.UK</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="{{  url_for('Home') }}">DANCREATES.UK</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#models">Models</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Researching how Machine Learning can be used to predict Stock and Crypto prices.</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Browse our interactive graphs and models using different Machine Learning algorithms.</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#models">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3" src="{{ url_for('static', filename='images/stockabs.png') }}" alt="..." /></div>
+                    </div>
+                </div>
+            </header>
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Algorithms used</h2></div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <h2 class="h5">Linear Regression</h2>
+                                    <p class="mb-0">Think of it like drawing a straight line on a graph that best fits the data points. Linear regression allows us to estimate how a change in the independent variable influences the dependent variable. By analyzing this relationship, we can make predictions or draw conclusions about future data points.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <h2 class="h5">Polynomial Regression</h2>
+                                    <p class="mb-0">Similar to Linear Regression, imagine you have data points that don't follow a straight line pattern, but rather curve or bend in a certain way. Polynomial regression helps us model these curved relationships by using mathematical equations with higher-order terms (such as squared or cubed terms) of the independent variable.</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <h2 class="h5">LSTM</h2>
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Coming soon</div>
+                                    <p class="mb-0">Think of LSTM as a specialized "memory unit" within the neural network. It can selectively remember or forget information based on the input data and the context it has learned. This memory cell allows LSTM to retain important information and discard irrelevant or redundant information from previous time steps.</p>
+                                </div>
+                                <div class="col h-100">
+                                    <h2 class="h5">Neural Networks</h2>
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Coming soon</div>
+                                    <p class="mb-0">A neural network is a computer system inspired by the structure and functioning of the human brain. It is designed to learn and make predictions or decisions from data.</p>
+                                    <p class="mb-0">Just like our brains have interconnected neurons, a neural network consists of artificial neurons called "nodes" or "neurons." These neurons are organized into layers, with each layer connected to the next, forming a network.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial section-->
+            <div class="py-5 bg-light" id="about">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"My name is Dan, and I'm a software engineering student specialising in Python and Machine Learning. I have built this Flask site to demonstrate and research how different ML algorithms can be used to predict future prices of stocks and crypto currencies."</div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="fw-bold">
+                                        Dan Kavanagh
+                                        <span class="fw-bold text-primary mx-1">/</span>
+                                        Computer Science with Artificial Intelligence student
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Model select section-->
+            <section class="py-5" id="models">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center">
+                                <h2 class="fw-bolder">Models</h2>
+                                <p class="lead fw-normal text-muted mb-5">Feel free to browse our price prediction models below.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Polynomial Regression</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('TSLA') }}"><h5 class="card-title mb-3">TSLA Stock Prediction</h5></a>
+                                    <p class="card-text mb-0">By capturing complex price trends, the model provides insights for potential price movements, empowering investors to make more informed decisions. Trained on 12 weeks worth of historical closing prices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Linear Regression</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('AAPL') }}"><h5 class="card-title mb-3">AAPL Stock Prediction</h5></a>
+                                    <p class="card-text mb-0">By identifying linear relationships between date and price, the model offers valuable insights into potential price movements. Trained on 12 weeks of historical data, it provides a robust foundation for making informed investment decisions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Polynomial Regression</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="{{  url_for('BTC') }}"><h5 class="card-title mb-3">BTC Price Prediction</h5></a>
+                                    <p class="card-text mb-0">This model generates polynomial functions to predict BTC's future prices. With this powerful forecasting tool, you can gain valuable insights and make well-informed decisions in the dynamic world of cryptocurrencies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; DanCreates.UK 2023 - This website is not intended for financial advice - do not invest based on these predictions.</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="scripts.js"></script>
+    </body>
+</html>
