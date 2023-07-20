@@ -5,7 +5,6 @@ from sklearn.preprocessing import PolynomialFeatures
 import datetime as dt
 import yfinance as yf
 
-import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
