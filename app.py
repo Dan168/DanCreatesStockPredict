@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 def Poly_reg(ticker, weeks):
-    # Get today's date and 12 weeks prior
+    # Get today's date and lag date
     today = dt.date.today()
     lag = today - dt.timedelta(weeks=weeks)
 
@@ -38,7 +38,7 @@ def Poly_reg(ticker, weeks):
     prediction_dates_ord = [date.toordinal() for date in prediction_dates]
     prediction_dates_poly = poly_reg.transform([[ordinal] for ordinal in prediction_dates_ord])
 
-    # For each date in the above collection, convert to ordinal and predict a price
+    # For each date in the above collection predict a price
     predictions = [str(lr.predict(poly_features.reshape(1, -1))[0]) for poly_features in prediction_dates_poly]
 
     return predictions
