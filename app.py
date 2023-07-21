@@ -48,7 +48,7 @@ def Get_close_price(ticker):
     today = dt.date.today()
     df = yf.download(ticker, today - dt.timedelta(days=3), today)
     df.reset_index(inplace=True)
-    return df['Close'][-1]
+    return df['Close'].iloc[-1]
 
 
 @app.route('/', methods=['GET', 'POST'])
